@@ -1,0 +1,575 @@
+/* Base Styles */
+body {
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 80vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.sidebar-header {
+    padding: 15px;
+    margin: 0 -15px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Icons */
+.material-icons {
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.logout-btn,
+.message-input-container button,
+.user-item button {
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logout-btn {
+    color: #dc3545;
+}
+
+.logout-btn .material-icons {
+    font-size: 24px;
+}
+
+.logout-btn:hover,
+.message-input-container button:hover,
+.user-item button:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+}
+
+/* Chat Area */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+#chatlog,
+.private-chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    background: white;
+}
+
+/* Message Input */
+.message-input-container {
+    display: flex;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    position: sticky;
+    bottom: 0;
+}
+
+.message-input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.message-input-container button {
+    color: #007bff;
+}
+
+.message-input-container button .material-icons {
+    font-size: 24px;
+}
+
+/* Room Styles */
+.room-creation input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.room-creation button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.room {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.room:hover {
+    background-color: #f0f0f0;
+}
+
+.room.current {
+    background-color: #e3f2fd;
+    border-color: #90caf9;
+}
+
+/* Room Controls */
+.room-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-room-btn {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.delete-room-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* User Styles */
+.user-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-item.current-user {
+    background-color: #ececec;
+    border-color: #a1a1a1;
+    font-weight: bold;
+}
+
+/* Login Styles */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+}
+
+.login-container h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-container p {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-container input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #2980b9;
+}
+
+/* Chat Tabs */
+.chat-tabs {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.chat-tab {
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    color: #6c757d;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.chat-tab:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.chat-tab.active {
+    background: white;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.private-chat {
+    display: none;
+    height: 100%;
+}
+
+.private-chat.active {
+    display: flex;
+    flex-direction: column;
+}
+
+#private-chats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-chat.hidden {
+    display: none;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Messages */
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+    padding-right: 70px;
+    min-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message .controls {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    align-items: center;
+}
+
+.message:hover .controls {
+    opacity: 1;
+}
+
+.message .controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message .controls button .material-icons {
+    font-size: 18px;
+}
+
+.message .controls button:hover {
+    transform: scale(1.2);
+    color: #495057;
+}
+
+.reply-indicator {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.reply-indicator:hover {
+    color: #495057;
+}
+
+.replying-to {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-left: 3px solid #007bff;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel-reply {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.cancel-reply:hover {
+    color: #495057;
+}
+
+.message.reply {
+    border-left: 3px solid #007bff;
+    margin-left: 8px;
+}
+
+.private-message {
+    background: #e9ecef;
+    color: #495057;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    position: relative;
+    padding-right: 70px;
+}
+
+.private-message .controls {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    align-items: center;
+}
+
+.private-message:hover .controls {
+    opacity: 1;
+}
+
+.private-message .controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.private-message .controls button:hover {
+    transform: scale(1.2);
+    color: #495057;
+}
+
+.private-message.reply {
+    border-left: 3px solid #007bff;
+    margin-left: 8px;
+}
+
+.private-message .reply-indicator {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.private-message .reply-indicator:hover {
+    color: #495057;
+}
+
+.tab-close {
+    margin-left: 8px;
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 0 4px;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tab-close .material-icons {
+    font-size: 16px;
+}
+
+.tab-close:hover {
+    opacity: 1;
+}
+
+/* User Management */
+.manage-users-btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.banned-users-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.banned-user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 2px 0;
+}
+
+.unban-btn,
+.unkick-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#banned_users_list,
+#kicked_users_list {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    display: none;
+}
+
+#banned_users_list h4,
+#kicked_users_list h4 {
+    margin: 0 0 10px 0;
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.banned-user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    margin: 5px 0;
+    background: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.unban-btn,
+.unkick-btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.unban-btn {
+    background-color: #dc3545;
+}
+
+.unkick-btn {
+    background-color: #28a745;
+}
+
+.unban-btn:hover {
+    background-color: #c82333;
+}
+
+.unkick-btn:hover {
+    background-color: #218838;
+}

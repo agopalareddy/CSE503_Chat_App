@@ -1,0 +1,14 @@
+{
+  "name": "socketio-chat-app",
+  "version": "1.0.0",
+  "description": "A multi-room chat application using Socket.IO and Node.js.",
+  "main": "chat-server.js",
+  "scripts": {
+    "start": "node chat-server.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
