@@ -2,17 +2,18 @@
 
 ## Overview
 
-This project implements a real-time chat application using Socket.IO and Node.js, featuring multi-room support, private messaging, and user moderation. It was developed as part of Washington University in St. Louis's CSE 503S: Rapid Prototyping and Creative Programming course.
+This project is a multi-room chat application built using Node.js and Socket.IO. It features password-protected rooms, private messaging, and user moderation capabilities.
 
 ## Features
 
-- Multi-room chat with password protection
+- Multi-room chat support with a default "Lobby"
+- Password protection for private rooms
+- Room creator privileges (kick/ban users)
 - Private messaging between users
-- Room moderation (kick/ban users)
-- Message replies and deletion
-- Persistent chat history
-- User authentication
-- Mobile-responsive design
+- Persistent nickname storage using localStorage
+- Message reply functionality
+- User room history tracking
+- Style customization via CSS
 
 ## Repository Structure
 
@@ -27,18 +28,34 @@ This project implements a real-time chat application using Socket.IO and Node.js
 
 ## Getting Started
 
-1. Install dependencies:
-```sh
-cd socketio-chat-app
-npm install
-```
+1. **Clone the repository** or download the files to your local machine.
 
-2. Start the server:
-```sh
-npm start
-```
+2. **Navigate to the project directory**:
+   ```
+   cd socketio-chat-app
+   ```
 
-3. Open `http://localhost:3456` in your browser
+3. **Install the dependencies**:
+   ```
+   npm install
+   ```
+
+4. **Start the server**:
+   ```
+   npm start
+   ```
+5. **Open your browser** and navigate to [http://localhost:3456/client.html](http://localhost:3456/client.html). You can open this URL in multiple tabs or windows to simulate multiple users.
+
+## Usage
+
+- Set your nickname to join the chat (automatically remembered)
+- You're already in the Lobby. You can create your own room with optional password protection
+- Send messages in rooms or privately to other users
+- Reply to specific messages
+- Room creators can:
+  - Kick or ban users
+  - Manage room access
+  - Delete the room
 
 ## Technologies
 
