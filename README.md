@@ -44,7 +44,7 @@ This project is a multi-room chat application built using Node.js and Socket.IO.
    ```
    npm start
    ```
-5. **Open your browser** and navigate to [http://localhost:3456/client.html](http://localhost:3456/client.html). You can open this URL in multiple tabs or windows to simulate multiple users.
+5. **Open your browser** and ***importantly, navigate to [http://localhost:3456/client.html](http://localhost:3456/client.html) manually***. You can open this URL in multiple tabs or windows to simulate multiple users.
 
 ## Usage
 
