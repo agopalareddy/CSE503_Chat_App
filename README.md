@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a multi-room chat application built using Node.js and Socket.IO. It features password-protected rooms, private messaging, and user moderation capabilities.
+This project is a multi-room chat application built using Node.js and Socket.IO. It features password-protected rooms, private messaging, and user moderation capabilities. It was developed as part of Washington University in St. Louis's CSE 503: Rapid Prototyping and Creative Programming course.
 
 ## Features
 
